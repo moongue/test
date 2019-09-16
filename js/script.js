@@ -1,26 +1,24 @@
-function menuLogic () {
-    var $header = $('.header');
-    var $mobileMenuTrigger = $('.mobile-menu-toggle', $header);
-    var $menuBlock = $('.menu', $header);
-    var openClass = 'is-open';
+let radioButton = document.querySelectorAll(".radio-btn");
 
-    // Toggle main menu.
-    $mobileMenuTrigger.on('click', function(e) {
-        e.preventDefault();
-        $menuBlock.toggleClass(openClass);
+radioButton.forEach(function (item) {
+    item.addEventListener('click', function (event) {
+        let target = event.target;
+        console.log(target);
+        let parent = target.closest('.fontsItem');
+        console.log(parent);
+        if (target.checked) {
+            parent.classList.add('fontsItem_active');
+            checkRadioBtn();
+        }
     });
-};
 
-function slider () {
-    $('.slider').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 1000,
-    });
-};
-
-$(window).on('load', function() {
-    menuLogic();
-    slider();
 });
+
+function checkRadioBtn() {
+    radioButton.forEach(function (item) {
+        if (!item.checked) {
+            item.closest('.fontsItem').classList.remove('fontsItem_active');
+        }
+    })
+}
+
