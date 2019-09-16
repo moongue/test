@@ -1,23 +1,58 @@
-@media #{$xll} {
-  
-}
-
-@media #{$xl} {
-  
-}
-
-@media #{$lg} {
-  
-}
-
-@media #{$md} {
-  
-}
-
 @media #{$sm} {
-  
+  h1 {
+    font-size: 1.35rem;
+  }
+  .fonts {
+    &Item {
+      &__name {
+        font-size: .9rem;
+      }
+    }
+  }
 }
 
 @media #{$xs} {
-  
+  .wrapper {
+    padding: 0 15px;
+  }
+  .tab-content {
+    padding: 0 15px 33px;
+  }
+  .xs-col {
+    flex-direction: column;
+  }
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .text {
+    font-size: 1.75rem;
+  }
+  .tabs {
+    margin-top: 15px;
+    margin-left: auto;
+  }
+  .fonts {
+    &Item {
+      display: flex;
+      justify-content: center;
+
+      &__name {
+        margin-left: 17px;
+      }
+
+      &_big {
+        .fontsItem {
+          &__bg {
+            width: 60px;
+            height: 60px;
+          }
+
+          &__index {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
 }

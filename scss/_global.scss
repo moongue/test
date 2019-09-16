@@ -6,22 +6,7 @@ body {
 }
 
 input:focus,
-input:active,
-textarea:focus,
-textarea:active,
-button:focus,
-button:active,
-span:focus,
-span:active,
-button:focus,
-button:active {
-  outline: none;
-}
-
-select:focus,
-select:hover,
-option:hover,
-option:focus {
+input:active {
   outline: none;
 }
 
@@ -46,7 +31,6 @@ option:focus {
 }
 
 h1 {
-  margin-top: 40px;
   font-weight: 600;
   font-size: 1.75rem;
   color: $dark;

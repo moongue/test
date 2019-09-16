@@ -6,22 +6,7 @@ body {
 }
 
 input:focus,
-input:active,
-textarea:focus,
-textarea:active,
-button:focus,
-button:active,
-span:focus,
-span:active,
-button:focus,
-button:active {
-  outline: none;
-}
-
-select:focus,
-select:hover,
-option:hover,
-option:focus {
+input:active {
   outline: none;
 }
 
@@ -58,7 +43,6 @@ option:focus {
 }
 
 h1 {
-  margin-top: 40px;
   font-weight: 600;
   font-size: 1.75rem;
   color: #23272a;
@@ -78,6 +62,19 @@ h1 {
 
 input[type=radio] {
   display: none;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  margin-top: 40px;
 }
 
 .tabs {
@@ -107,17 +104,19 @@ input[type=radio] {
 }
 
 .text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   font-size: 2rem;
 }
 
 .tab-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border: 2px solid #d0d5db;
   border-right-color: #c5c6e2;
   border-left-color: #c5c6e2;
@@ -160,11 +159,17 @@ input[type=radio] {
 }
 
 .tab-content.show {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fonts {
+  width: 100%;
 }
 
 .fontsItem {
-  margin-top: 30px;
+  margin-top: 33px;
   cursor: pointer;
 }
 
@@ -233,6 +238,7 @@ input[type=radio] {
   margin-top: 23px;
   padding-left: 17px;
   max-width: 164px;
+  font-size: 1rem;
   line-height: 1.3;
   font-weight: 600;
   position: relative;
@@ -247,6 +253,74 @@ input[type=radio] {
   height: 8px;
   background: #999ba7;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  .fontsItem__name {
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .tab-content {
+    padding: 0 15px 33px;
+  }
+
+  .xs-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .header {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .text {
+    font-size: 1.75rem;
+  }
+
+  .tabs {
+    margin-top: 15px;
+    margin-left: auto;
+  }
+
+  .fontsItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .fontsItem__name {
+    margin-left: 17px;
+  }
+
+  .fontsItem_big .fontsItem__bg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fontsItem_big .fontsItem__index {
+    font-size: 1.25rem;
+  }
 }
 
 /*# sourceMappingURL=maps/style.css.map */

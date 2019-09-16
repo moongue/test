@@ -1,6 +1,10 @@
 window.addEventListener('DOMContentLoaded', function () {
-    let radioButton = document.querySelectorAll(".radio-btn");
+    let radioButton = document.querySelectorAll(".radio-btn"),
+        tab = document.querySelectorAll('.tabsItem'),
+        tabBlock = document.querySelector('.tabs'),
+        tabContent = document.querySelectorAll('.tab-content');
 
+    // Radio button script
     radioButton.forEach(function (item) {
         item.addEventListener('click', function (event) {
             let target = event.target;
@@ -13,6 +17,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    // If radio button non checked remove class 'fontsItem_active'
     function checkRadioBtn() {
         radioButton.forEach(function (item) {
             if (!item.checked) {
@@ -20,10 +25,6 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         })
     }
-
-    let tab = document.querySelectorAll('.tabsItem'),
-        tabBlock = document.querySelector('.tabs'),
-        tabContent = document.querySelectorAll('.tab-content');
 
     function hideTabContent(a) {
         for (let i = a, endI = tabContent.length; i < endI; i++) {
