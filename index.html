@@ -15,52 +15,61 @@
 <main>
    <div class="wrapper">
       <h1>Please select one font</h1>
-      <div class="fonts">
-         <div class="row sb">
-            <div class="col sb">
-               <label>
-                  <div class="fontsItem fontsItem_big">
-                     <div class="fontsItem__bg bg-green">
-                        <p class="fontsItem__index">
-                           m
+      <div class="tabs">
+         <div class="tabsItem tabsItem_active">My fonts</div>
+         <div class="tabsItem">Buy fonts</div>
+      </div>
+      <div class="tab-content">
+         <div class="fonts">
+            <div class="row sb">
+               <div class="col sb">
+                  <label>
+                     <div class="fontsItem fontsItem_big">
+                        <div class="fontsItem__bg bg-green">
+                           <p class="fontsItem__index">
+                              m
+                           </p>
+                        </div>
+                        <p class="fontsItem__name">
+                           Merriweather project is led by Sorkin Type
                         </p>
+                        <input type="radio" name="font" class="radio-btn" checked>
                      </div>
-                     <p class="fontsItem__name">
-                        Merriweather project is led by Sorkin Type
-                     </p>
-                     <input type="radio" name="font" class="radio-btn" checked>
-                  </div>
-               </label>
-            </div>
-            <div class="col sb">
-               <label>
-                  <div class="fontsItem fontsItem_row fontsItem_active">
-                     <div class="fontsItem__bg bg-pink">
-                        <p class="fontsItem__index">
-                           r
+                  </label>
+               </div>
+               <div class="col sb">
+                  <label>
+                     <div class="fontsItem fontsItem_row fontsItem_active">
+                        <div class="fontsItem__bg bg-pink">
+                           <p class="fontsItem__index">
+                              r
+                           </p>
+                        </div>
+                        <p class="fontsItem__name">
+                           Roboto doesn't compromise, allow&shy;ing letters
                         </p>
+                        <input type="radio" name="font" class="radio-btn" checked>
                      </div>
-                     <p class="fontsItem__name">
-                        Roboto doesn't compromise, allow&shy;ing letters
-                     </p>
-                     <input type="radio" name="font" class="radio-btn" checked>
-                  </div>
-               </label>
-               <label>
-                  <div class="fontsItem fontsItem_row">
-                     <div class="fontsItem__bg bg-blue">
-                        <p class="fontsItem__index">
-                           ns
+                  </label>
+                  <label>
+                     <div class="fontsItem fontsItem_row">
+                        <div class="fontsItem__bg bg-blue">
+                           <p class="fontsItem__index">
+                              ns
+                           </p>
+                        </div>
+                        <p class="fontsItem__name">
+                           Noto Sans covers over 30 scripts
                         </p>
+                        <input type="radio" name="font" class="radio-btn">
                      </div>
-                     <p class="fontsItem__name">
-                        Noto Sans covers over 30 scripts
-                     </p>
-                     <input type="radio" name="font" class="radio-btn">
-                  </div>
-               </label>
+                  </label>
+               </div>
             </div>
          </div>
+      </div>
+      <div class="tab-content">
+            <p class="text">Lorem ipsum.</p>
       </div>
    </div>
 </main>
